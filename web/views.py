@@ -3,6 +3,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("You are in main page")
+    message = 'this is <a href="/weblist"> weblist</a>'
+    return HttpResponse(message)
 
 # Create your views here.
