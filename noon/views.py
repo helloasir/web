@@ -11,4 +11,6 @@ def page1(request):
 def page2(request):
     return HttpResponse("Hello, you are in Page 2 <a href=/>Home </a> or <a href=/weblist>weblist </a> or <a href=/noon >Noon </a> ")
 
+
+
 # Create your views here.
