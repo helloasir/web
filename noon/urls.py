@@ -22,4 +22,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('page1', views.page1, name='Page1'),
     path('page2', views.page2, name='Page2'),
+    
 ]
