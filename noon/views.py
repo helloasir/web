@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import datetime
+from noon.models import Web
+from . import views
+
 
 
 
@@ -17,11 +20,11 @@ def index(request):
     date_dict = {'display_date':hour, 'emp_name': name, 'display':message}
     return render(request,'noon/noon.html',context= date_dict)
 
-def page1(request):
-    return HttpResponse("Hello, you are in Page 1 <a href=/>Home </a> or <a href=/weblist>weblist </a> or <a href=/noon >Noon </a> ")
 
-def page2(request):
-    return HttpResponse("Hello, you are in Page 2 <a href=/>Home </a> or <a href=/weblist>weblist </a> or <a href=/noon >Noon </a> ")
+def web(request):
+    webdata = Web.objects.all()
+    context = {'webdata': webdata}
+    return render(request,'noon/web.html',context)
 
 
 
